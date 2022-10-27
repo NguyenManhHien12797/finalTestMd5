@@ -1,0 +1,26 @@
+<h1>Sửa tour</h1>
+<form (ngSubmit)="submit()">
+  <table>
+        <tr>
+<!--          <td>Mã Tour:</td>-->
+          <td><input type="number" hidden [(ngModel)]="tour.id" name="id"></td>
+        </tr>
+    <tr>
+      <td>Tên:</td>
+      <td><input type="text" [(ngModel)]="tour.title" name="title"></td>
+    </tr>
+    <tr>
+      <td>Giá Tour</td>
+      <td><input type="number" [(ngModel)]="tour.price" name="price"></td>
+    </tr>
+    <tr>
+      <td>Mô tả về Tour</td>
+      <td><input type="text" [(ngModel)]="tour.description" name="description"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Sửa Tour</button></td>
+    </tr>
+  </table>
+</form>
+

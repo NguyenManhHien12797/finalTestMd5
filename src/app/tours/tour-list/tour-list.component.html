@@ -1,0 +1,19 @@
+<h1>Danh sách Tour</h1>
+<table>
+  <tr>
+    <td>STT</td>
+    <td>Tên</td>
+    <td>Giá</td>
+    <td>Mô tả</td>
+    <td>Hành động</td>
+  </tr>
+  <tr *ngFor="let tour of tours; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{tour.title}}</td>
+    <td>{{tour.price}}</td>
+    <td>{{tour.description}}</td>
+    <a [routerLink]="['/tours/edit',tour.id]" (click)="findTour(tour)">Sửa</a>
+    <a (click)="removeTour(tour)">Xóa</a>
+
+  </tr>
+</table>
